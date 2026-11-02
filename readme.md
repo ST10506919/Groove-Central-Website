@@ -9,11 +9,16 @@
 **Student Number:** ST10506919
 **Submission Date:** 2026/10/05
 
+## Website Link: https://st10506919.github.io/Groove-Central-Website/
+
+Website hosted via Github Pages in a public repo on my Github account
+Link: https://github.com/ST10506919/Groove-Central-Website
+
 ## Brief Description
 
 This is my first full scale website using CSS and HTML. I made a website for a fictional Vinyl store that is based in Randburg found in Shop 4 in Ferndale on Republic shopping centre, this was based on an idea I had to open and run my own vinyl store because I love the feeling of collecting rare items and listening to music I love. 
 
-This website came together using knowledge gathered from Lecturer Jessel Sookha, W3Schools and inspecting other websites CSS via browser dev tools  to gather information on  how developers 
+This website came together using knowledge gathered from Lecturer Jessel Sookha, W3Schools and inspecting other websites CSS via browser dev tools to gather information on how developers 
 
 ## Project Structure
 
@@ -33,13 +38,13 @@ Groove-Central-Website/
 │   ├── 📄 contact.js
 │   └── 📄 enquiry.js
 ├── 📁 styles/
-├── 📄 home-page.html
+├── 📄 index.html
 ├── 📄 readme.md
 ├── 📄 robots.txt
 └── 📄 sitemap.xml       
 ```
 
-**References**
+## References
 
 
 •	AliExpress, 2026. Product listing. [Online] Available at: https://www.aliexpress.com/item/1005007592387758.html [Accessed 3 August 2026].
