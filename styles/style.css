@@ -1,0 +1,772 @@
+/* 1. UNIVERSAL ELEMENTS AND HOME PAGE */
+@font-face {
+  font-family: "Bookman Bold";
+  src: url("../assets/fonts/Bookman-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --gold: #d99518;
+  --amber: #d97d0d;
+  --burnt: #d95a11;
+  --rust: #d94711;
+  --ink: #121212;
+
+  --surface: #1b1712;
+  --surface-raised: #221c15;
+  --line: #3a2f22;
+
+  --cream: #f4e9d8;
+  --cream-dim: #c8b9a2;
+
+  --sunset: linear-gradient(115deg, var(--gold), var(--amber) 38%, var(--burnt) 68%, var(--rust));
+
+  --font-display: "Bookman Bold", Georgia, "Times New Roman", serif;
+  --font-body: "Bookman Bold", Georgia, "Times New Roman", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  #banner {
+    min-height: 60vh;
+  }
+
+  #Founder article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  button[type="submit"] {
+    justify-self: stretch;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  background-image: repeating-radial-gradient(
+      circle at 88% 8%,
+      rgba(217, 149, 24, 0.06) 0,
+      rgba(217, 149, 24, 0.06) 1.5px,
+      transparent 2.5px,
+      transparent 45px
+    );
+
+  background-attachment: fixed;
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--cream);
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 1rem + 1.6vw, 2rem);
+  letter-spacing: 0.03em;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 1.05rem + 1vw, 1.75rem);
+  color: var(--gold);
+}
+
+h4 {
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.2rem);
+}
+
+p {
+  max-width: 62ch;
+  color: var(--cream-dim);
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--burnt);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+header,
+footer,
+main > section,
+main > h2 {
+  padding-left: max(var(--gutter), calc((100% - var(--content-width)) / 2));
+  padding-right: max(var(--gutter), calc((100% - var(--content-width)) / 2));
+}
+
+main {
+  display: block;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  background: var(--ink);
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: var(--sunset);
+}
+
+header h1 {
+  margin: 0;
+  margin-right: auto;
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+header nav a {
+  display: inline-block;
+  padding: 0.35rem 0.1rem;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--sunset);
+  transition: width 0.25s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  color: var(--gold);
+}
+
+header nav a:hover::after,
+header nav a:focus-visible::after {
+  width: 100%;
+}
+
+footer {
+  background: var(--surface);
+  border-top: 3px solid transparent;
+  border-image: var(--sunset) 1;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+footer p {
+  max-width: none;
+  color: var(--cream-dim);
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.75rem;
+}
+
+footer nav a {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+  color: var(--gold);
+}
+
+#banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  isolation: isolate;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+#banner img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.3) saturate(1.35) brightness(0.5) contrast(1.1);
+}
+
+#banner h2,
+#banner p,
+#banner > a {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+}
+
+#banner h2 {
+  max-width: 16ch;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6);
+}
+
+#banner p {
+  max-width: 46ch;
+  color: var(--cream);
+}
+
+#banner > a,
+#visit-us > a,
+#new > a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.85rem 1.75rem;
+  background: var(--sunset);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  border-radius: 10rem;
+  box-shadow: var(--shadow-crate);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#banner > a:hover,
+#visit-us > a:hover,
+#new > a:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -14px rgba(217, 71, 17, 0.55);
+}
+
+#intro {
+  position: relative;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow: clip;
+}
+
+#intro::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(60vw, 380px);
+  height: min(60vw, 380px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, var(--surface) 0 7px, var(--ink) 7px 14px);
+  box-shadow: inset 0 0 0 2px rgba(217, 149, 24, 0.18);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+#intro h2,
+#intro p {
+  position: relative;
+  z-index: 1;
+}
+
+#intro h2 {
+  color: var(--gold);
+}
+
+#intro p {
+  margin-inline: auto;
+}
+
+#new {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+#new > h2,
+#new > a {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: fit-content;
+}
+
+#new article {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: var(--shadow-crate);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#new article:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 20px 36px -14px rgba(217, 90, 17, 0.45);
+}
+
+#new article img {
+  margin: 0 auto 1rem;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.6);
+}
+
+#new article h3 {
+  font-size: 1.05rem;
+  color: var(--cream);
+}
+
+#new article p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+  max-width: none;
+}
+
+[id="visit-us"] {
+  background: var(--sunset);
+  color: var(--ink);
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+[id="visit-us"] h2 {
+  color: var(--ink);
+}
+
+[id="visit-us"] p {
+  color: var(--ink);
+  margin-inline: auto;
+}
+
+[id="visit-us"] > a {
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: 0 14px 30px 12px rgba(0, 0, 0, 0.55);
+}
+
+[id="visit-us"] > a:hover {
+  color: var(--gold);
+}
+
+/* 2. ABOUT US */
+
+main > h2:first-child {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#mission,
+#vision,
+#who-we-serve,
+#our-story,
+#Founder {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-left: 3px solid var(--gold);
+  margin-left: max(var(--gutter), calc((100% - var(--content-width)) / 2));
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+#Founder {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+#Founder article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 620px;
+}
+
+#Founder img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px var(--ink), 0 0 0 6px var(--gold);
+}
+
+#Founder h4 {
+  color: var(--gold);
+  margin-bottom: 0.2em;
+}
+
+#Founder p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* 3. STORE PAGE AND ENQUIRY PAGE */
+
+address {
+  font-style: normal;
+  color: var(--cream-dim);
+  line-height: 1.8;
+}
+
+address a {
+  color: var(--cream);
+}
+
+#contact-details {
+  padding-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+#contact-details h4 {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+#contact-details ul li {
+  color: var(--cream-dim);
+  font-size: 0.9rem;
+  padding: 0.15rem 0;
+}
+
+#location {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#location-store {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 650px;
+}
+
+#location-store h4 {
+  color: var(--gold);
+}
+
+[id="Contact-Form"],
+[id="enquiry-form"] {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+[id="enquiry-form"] {
+  padding-top: 4rem;
+}
+
+label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+
+form {
+  max-width: 560px;
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+form > div {
+  display: grid;
+  gap: 0.4rem;
+  align-self: center;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--cream);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.75rem 0.9rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  justify-self: start;
+  padding: 0.85rem 2rem;
+  background: var(--sunset);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: var(--shadow-crate);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -14px rgba(217, 71, 17, 0.55);
+}
+
+/* 4. STORE PAGE */
+
+main > p:first-of-type {
+  text-align: center;
+  margin-inline: auto;
+  padding-top: 0.25rem;
+}
+
+#filter h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 0.9rem;
+}
+
+#filter ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+#filter a {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#filter a:hover,
+#filter a:focus-visible {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+#Jazz,
+#French-House,
+#Hip-Hop,
+#RnB-Alternative,
+#Jazz-Fusion,
+#Hardware {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 270px));
+  gap: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+#Jazz > h3,
+#French-House > h3,
+#Hip-Hop > h3,
+#RnB-Alternative > h3,
+#Jazz-Fusion > h3,
+#Hardware > h3,
+#Hardware > p {
+  grid-column: 1 / -1;
+}
+
+#Jazz article,
+#French-House article,
+#Hip-Hop article,
+#RnB-Alternative article,
+#Jazz-Fusion article,
+#Hardware article {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-crate);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#Jazz article:hover,
+#French-House article:hover,
+#Hip-Hop article:hover,
+#RnB-Alternative article:hover,
+#Jazz-Fusion article:hover,
+#Hardware article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 36px -14px rgba(217, 90, 17, 0.45);
+}
+
+#Jazz article img,
+#French-House article img,
+#Hip-Hop article img,
+#RnB-Alternative article img,
+#Jazz-Fusion article img,
+#Hardware article img {
+  margin: 0 auto 1rem;
+  border-radius: 4px;
+}
+
+#Jazz article h4,
+#French-House article h4,
+#Hip-Hop article h4,
+#RnB-Alternative article h4,
+#Jazz-Fusion article h4,
+#Hardware article h4 {
+  color: var(--rust);
+  font-size: 1rem;
+}
+
+#Jazz article p,
+#French-House article p,
+#Hip-Hop article p,
+#RnB-Alternative article p,
+#Jazz-Fusion article p,
+#Hardware article p {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+}
+
+#Special-Orders {
+  background: var(--sunset);
+  color: var(--ink);
+  text-align: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  margin-top: 1rem;
+}
+
+#Special-Orders h3 {
+  color: var(--ink);
+}
+
+#Special-Orders p {
+  color: rgba(18, 18, 18, 0.78);
+  margin-inline: auto;
+}
+
+#Special-Orders > a {
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 25px;
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+
+#Special-Orders > a:hover {
+  color: var(--gold);
+}

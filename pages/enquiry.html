@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groove Central | Enquiry</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <a href="../home-page.html">
+            <img src="../assets/images/Groove Central Logo.png" height="50"  alt="Groove Central Logo">
+        </a>
+        <h1>Groove Central Vinyl</h1>
+        <nav>
+            <ul>
+                <li><a href="../home-page.html"> Home </a></li>
+                <li><a href="store.html"> Store </a></li>
+                <li><a href="about-us.html"> About Us </a></li>
+                <li><a href="enquiry.html"> Enquiry </a></li>
+                <li><a href="contact-us.html"> Contact Us </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="enquiry-form" aria-label="enquiry-form">
+            <h3>Want to make an enquiry?</h3>
+            <p>Looking for a special item or want to know if you can trade in an unusual selection, simply enter your details here and we'll get in touch.</p>
+            <form id="contact-form">
+                <div>
+                    <label for="full name">Full Name</label>
+                    <input type="text" id="full-name" name="full name" placeholder="Enter Name">
+                </div>
+
+                <div>
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" placeholder="Email">
+                </div>
+
+                <div>
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone" name="phone" placeholder="Phone number">
+                </div>
+
+                <div>
+                    <label for="message">Type Of Message</label>
+
+                    <select id="message" name="message">
+                        <option disabled>-- Please Select --</option>
+                        <option value="special-order">Special Order</option>
+                        <option value="trade-in">Trade-In</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="enquiry message">Enquiry Message</label>
+                    <textarea id="enquiry-message" name="message" rows="6" placeholder="Type Message Here"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <script src="../scripts/enquiry.js"></script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Groove Central Vinyl. All Rights Reserved</p>
+        <nav>
+            <ul>
+                <li><a href="../home-page.html"> Home </a></li>
+                <li><a href="store.html"> Store </a></li>
+                <li><a href="about-us.html"> About Us </a></li>
+                <li><a href="enquiry.html"> Enquiry </a></li>
+                <li><a href="contact-us.html"> Contact Us </a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+</body>
+</html>
