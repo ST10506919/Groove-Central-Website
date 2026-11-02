@@ -1,44 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home page -->
-  <url>
-    <loc>http://127.0.0.1:5501/home-page.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://st10506919.github.io/Groove-Central-Website/index.html</loc>
+<lastmod>2026-11-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <!-- Store / products page -->
-  <url>
-    <loc>http://127.0.0.1:5501/pages/store.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<url>
+<loc>https://st10506919.github.io/Groove-Central-Website/pages/store.html</loc>
+<lastmod>2026-11-02</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 
-  <!-- About us page -->
-  <url>
-    <loc>http://127.0.0.1:5501/pages/about-us.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://st10506919.github.io/Groove-Central-Website/pages/about-us.html</loc>
+<lastmod>2026-11-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
-  <!-- Enquiry page -->
-  <url>
-    <loc>http://127.0.0.1:5501/pages/enquiry.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://st10506919.github.io/Groove-Central-Website/pages/enquiry.html</loc>
+<lastmod>2026-11-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
-  <!-- Contact page -->
-  <url>
-    <loc>http://127.0.0.1:5501/pages/contact-us.html</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+<url>
+<loc>https://st10506919.github.io/Groove-Central-Website/pages/contact-us.html</loc>
+<lastmod>2026-11-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>

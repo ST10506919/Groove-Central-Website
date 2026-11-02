@@ -1,5 +1,4 @@
-// robots.txt for Groove Central
 User-agent: *
-Disallow: /.vscode/
 Allow: /
-Sitemap: http://127.0.0.1:5501/sitemap.xml
+ 
+Sitemap: https://st10506919.github.io/Groove-Central-Website/sitemap.xml
